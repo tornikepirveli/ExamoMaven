@@ -3,7 +3,7 @@ package core;
 public class Question implements ClassType {
     private String body;
 
-    Question(String body){
+    public Question(String body){
         this.body = body;
     }
 

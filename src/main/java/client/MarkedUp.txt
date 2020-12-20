@@ -1,0 +1,618 @@
+~~~
+test
+1. Which of the following method signatures is a valid declaration of an entry point in a Java application?
+A public void main(String[] args)@0.0
+B public static void main()@0.0
+C private static void start(String[] mydata)@0.0
+D public static final void main(String[] mydata)@1.0
+???
+An entry point in a Java application consists of amain()method with a singleString[]argument, return type ofvoid, and modifierspublicandstatic. The name of the variable in the input argument does not matter. Option A is missing thestaticmodifier, Option B is missing theString[]argument, and Option C has the wrong access modifier and method name. Only Option D fulfills these requirements. Note that the modifierfinalis optional and may be added to an entry point method.
+~~~
+test
+2. The following class diagram demonstrates the relationship betweenGoldandSilver, which extend theMetalclass. Assume the attributes are all declaredpublic. Which statement about the diagram is not true?
+
+A The diagram demonstrates platform independence in Java.@1.0
+B The diagram demonstrates object-oriented design in Java.@0.0
+C TheGoldandSilverclasses inheritweightandcolorattributes from theMetalclass.@0.0
+D Golddoes not inherit thelusterattribute.@0.0
+???
+The diagram is an example of object-oriented design in Java, making Option B a true statement. Options C and D are also true, as they follow from the inheritance model in the diagram. Option A is the correct answer, since platform independence has nothing to do with the diagram.
+~~~
+test
+3. What is the proper filename extension for a Java bytecode compiled file?
+A .java@0.0
+B .bytecode@0.0
+C .class@1.0
+D .dll@0.0
+???
+The proper extension for a Java compiled bytecode file is.class, making Option C the correct answer.
+~~~
+test
+4. Given that aDateclass exists in both thejava.utilandjava.sqlpackages, what is the result of compiling the following class?
+1: import java.util.*;
+2: import java.sql.*;
+3: public class BirthdayManager {
+4:    private Date rob = new Date();
+5:    private java.util.Date sharon = new java.util.Date();
+6: }
+A The code does not compile because of lines 1 and 2.@0.0
+B The code does not compile because of line 4.@1.0
+C The code does not compile because of line 5.@0.0
+D The code compiles without issue.@0.0
+???
+The fact that theDateclass exists in both packages does not impact the ability to import both packages, so lines 1 and 2 compile without issue, and Option A is incorrect. Line 4 will not compile because theDateclass used is ambiguous, making Option B correct and Option D incorrect. Finally, Option C is incorrect because line 5 does compile, as the fully qualified name of the class is used.
+~~~
+test
+5. Which of the following is not a facet of traditional object-oriented programming languages?
+A Objects are grouped as procedures, separate from the data they act on.@1.0
+B An object can take many forms via casting.@0.0
+C An object can hold data, referred to as attributes.@0.0
+D An object can perform actions, via methods.@0.0
+???
+Options B, C, and D are each attributes of traditional object-oriented programming. Option A is incorrect as an object-oriented project tends to group data and the actions related to that data into a single object.
+~~~
+test
+6. Which variables have a scope limited to a method?
+A Interface variables@0.0
+B Class variables@0.0
+C Instance variables@0.0
+D Local variables@1.0
+???
+Only local variables have such a small scope, making Option D the correct answer.
+~~~
+test
+7. Which package is imported into every Java class by default?
+A java.util@0.0
+B java.lang@1.0
+C system.lang@0.0
+D java.system@0.0
+???
+The packagejava.langis imported into every Java class, so Option B is correct. The other options must be explicitly imported. Option A exists but must be explicitly imported. Options C and D do not exist in the standard Java runtime.
+~~~
+test
+8. Which of the following is not a valid code comment in Java?
+A // Add 5 to the result@0.0
+B /*** TODO: Fix bug 12312 ***/@0.0
+C # Add configuration value@1.0
+D /* Read file from system ****/@0.0
+???
+Java accepts Options A, B, and D as valid comments. Note that the/* */syntax can have additional (and uneven) star (*) characters as shown in B and D. Option C is incorrect as hashtag (#) is not a valid comment character in Java.
+~~~
+test
+9. Which statement about a valid.javafile is true?
+A It can only contain one class declaration.@0.0
+B It can contain onepublicclass declaration and onepublicinterface definition.@0.0
+C It must define at least onepublicclass.@0.0
+D It may define at most onepublicclass.@1.0
+???
+A valid.javafile may define any number of classes or interfaces but have at most onepublicclass. It can also not define anypublicclasses. For these reasons, Option A, B, and C are incorrect, leaving Option D as the only correct answer.
+~~~
+test
+10. Given the following application, fill in the missing values in the table starting from the top and going downward.
+package competition;
+public class Robot {
+  static String weight = "A lot";
+  /* default */ double ageMonths = 5, ageDays = 2;
+  private static boolean success = true;
+  public void main(String[] args) {
+      final String retries = "1";
+      // P1
+  }
+}
+Variable Type
+Number of Variables Accessible atP1
+Class
+_______
+Instance
+_______
+Local
+_______
+
+A 2, 0, 1@0.0
+B 2, 2, 1@1.0
+C 1, 0, 1@0.0
+D 0, 2, 1@0.0
+???
+Notice in this question thatmain()is not astaticmethod, therefore it can access both class and instance variables. Since there are two class variables and two instance variables defined, Option B is the correct answer.
+~~~
+test
+11. Which statement aboutimportstatements is true?
+A The class will not compile if it contains unusedimportstatements.@0.0
+B Unusedimportstatements can be removed from the class without causing a class to become unable to be compiled.@1.0
+C The class will not compile if a duplicateimportstatement is present.@0.0
+D If a class contains animportstatement for a class used in the program that cannot be found, it can still compile.@0.0
+???
+A class will compile if it has unused or redundantimportstatements, making Option A and C incorrect. Option D is also incorrect as the compiler must be able to locate the class of theimportstatement. The correct answer is Option B. Removing unusedimportstatements does not cause a class to become unable to be compiled.
+~~~
+test
+12. What is the result of compiling and executing the following class?
+1: public class ParkRanger {
+2:    int birds = 10;
+3:    public static void main(String[] data) {
+4:       int trees = 5;
+5:       System.out.print(trees+birds);
+6:    }
+7: }
+A It does not compile.@1.0
+B It compiles but throws an exception at runtime.@0.0
+C It compiles and outputs5.@0.0
+D It compiles and outputs15.@0.0
+???
+The code does not compile because of line 5, making Option A the correct answer. For this question, it helps to understand variable scope. Themain()method isstaticand does not have access to any class instance variables. Thebirdsvariable is notstaticand requires a class instance variable to access. Therefore, the code does not compile when thestaticmethod attempts to access a non-staticvariable without an instance of the class.
+~~~
+test
+13. Which statements about Java are true?
+Thejavacommand can execute.javaand.classfiles.
+Java is not object oriented.
+Thejavaccommand compiles directly into native machine code.
+A I only@0.0
+B III only@0.0
+C II and III@0.0
+D None are true.@1.0
+???
+Thejavacommand can only execute compiled.classfiles, so I is false. Java is most certainly object oriented, one of the key design principles, so II is also false. Thejavaccommand compiles into bytecode, which must be run in a Java virtual machine (JVM), and is not native machine code, so III is false as well. Since none of the statements are true, Option D is the correct answer.
+~~~
+test
+14. Which of the following lines of code is not allowed as the first line of a Java class file?
+A import widget.*;@0.0
+B // Widget Manager@0.0
+C package sprockets;@0.0
+D int facilityNumber;@1.0
+???
+A class can start with a comment, an optionalpackagestatement, or animportstatement if there is nopackagestatement. It cannot start with a variable definition, making Option D the correct answer.
+~~~
+test
+15. Which one of the following statements is true about using packages to organize your code in Java?
+A Every class is required to include a package declaration.@0.0
+B To create a new package, you need to add apackage.initfile to the directory.@0.0
+C Packages allow you to limit access to classes, methods, or data from classes outside the package.@1.0
+D It is not possible to restrict access to objects and methods within a package.@0.0
+???
+Classes may be defined without a package declaration and are placed in the default package, so Option A is incorrect. Option B is a completely false statement as no such file is required in Java. Option C is correct as it is one of the primary reasons for organizing your application into packages. Option D is incorrect as package-private allows access to methods and variables to be limited to those classes within the same package.
+~~~
+test
+16. Given that the current directory is/user/home, with an application Java file in/user/home/Manager.javathat uses the default package, which are the correct commands to compile and run the application in Java?
+A javac Manager@0.0
+B java Manager@1.0
+C javac Manager.java@0.0
+D java Manager@0.0
+E javac Manager@0.0
+F java Manager.class@0.0
+G javac Manager.java@0.0
+H java Manager.class@0.0
+???
+The compilation command requires the full or relative name of the file, including the.javaextension, making Options A and C incorrect. The execution command requires the class name without a filename extension, making Option D incorrect. Option B is the only correct set of compilation and execution commands.
+~~~
+test
+17. Structuring a Java class such that only methods within the class can access its instance variables is referred to as _______.
+A platform independence@0.0
+B object orientation@0.0
+C inheritance@0.0
+D encapsulation@1.0
+???
+Encapsulation is the technique of removing access to a class’s instance variables from processes outside the class, making Option D the correct answer.
+~~~
+test
+18. What is the output of the following code snippet?
+String tree = "pine";
+int count = 0;
+if (tree.equals("pine")) {
+  int height = 55;
+  count = count + 1;
+}
+System.out.print(height + count);
+A 1@0.0
+B 55@0.0
+C 56@0.0
+D It does not compile.@1.0
+???
+Theheightvariable is declared within the if-then statement block. Therefore, it cannot be referenced outside the if-then statement and the code does not compile.
+~~~
+test
+19. Which of the following is true of a Java bytecode file?
+A It can be run on any computer with a compatible JVM.@1.0
+B It can only be executed on the same type of computer that it was created on.@0.0
+C It can be easily read and modified in a standard text editor.@0.0
+D It requires the corresponding.javathat created it to execute.@0.0
+???
+A Java bytecode file is a binary encoded set of instructions designed to be run on any computer with a compatible JVM, making Option A the only correct answer. By compatible JVM, we mean one capable of running the class file. For example, a Java 6 JVM may have trouble executing a Java 8 compiled file. Option B is incorrect, and is more a facet of machine language compiled programming classes. Option C is also incorrect as binary data is not particularly human readable. Finally, Option D is incorrect as the compiled file can be distributed without its.javasource file and execute without issue.
+~~~
+test
+20. What is the correct character for terminating a statement in Java?
+A A colon (:)@0.0
+B An end-of-line character@0.0
+C A tab character@0.0
+D A semicolon (;)@1.0
+???
+Unlike with some other programming languages, the proper way to terminate a line of code is with a semicolon (;), making D the only correct answer.
+~~~
+test
+21. What is the result of compiling and executing the following class?
+1: public class Tolls {
+2:    private static int yesterday = 1;
+3:    int tomorrow = 10;
+4:    public static void main(String[] args) {
+5:       Tolls tolls = new Tolls();
+6:       int today=20, tomorrow = 40;
+7:       System.out.print(today + tolls.tomorrow + tolls.yesterday);
+8:    }
+9: }
+A The code does not compile due to line 6.@0.0
+B The code does not compile due to line 7.@0.0
+C 31@1.0
+D 61@0.0
+???
+The code compiles and runs without issue, so Options A and B are incorrect. The question relies on your ability to understand variable scope. The variabletodayhas local scope to the method in which it is executed. The variabletomorrowis re-declared in the method, but the reference used on line 7 is to the instance variable with a value of10. Finally, the variabletomorrowisstatic. While using an instance reference to access astaticvariable is not recommended, it does not prevent the variable from being read. The result is line 7 evaluates and prints (20 + 10 + 1) = 31, making C the correct answer.
+~~~
+test
+22. Given the following class definition, which is the only line that does not contain a compilation error?
+1: public ThisClassDoesNotCompile {
+2:    double int count;
+3:    void errors() {}
+4:    static void private limit; }
+A Line 1@0.0
+B Line 2@0.0
+C Line 3@1.0
+D Line 4@0.0
+???
+Line 1 is missing theclasskeyword. Line 2 contains two types for the same variable. Line 3 is a valid definition for a method, making C the correct answer. Finally, line 4 contains an access modifier,private, after the return type, which is not allowed. In addition,voidis an invalid type for variables.
+~~~
+test
+23. Which of the following features allows a Java class to be run on a wide variety of computers and devices?
+A Encapsulation@0.0
+B Object oriented@0.0
+C Inheritance@0.0
+D Platform independence@1.0
+???
+Platform independence is the property of Java that allows it to be run on a variety of different devices.
+~~~
+test
+24. Which of the following is not a property of a JVM?
+A It prevents Java bytecode from being easily decoded/decompiled.@1.0
+B It supports platform independence.@0.0
+C It manages memory for the application.@0.0
+D It translates Java instructions to machine instructions.@0.0
+???
+Options B, C, and D are each correct statements about JVMs. Option A is incorrect. Not only is it not a statement about JVMs, it is actually false as Java bytecode can often be easily decoded/decompiled.
+~~~
+test
+25. Which of the following variables are always in scope for the entire program?
+A Package variables@0.0
+B Class variables@1.0
+C Instance variables@0.0
+D Local variables@0.0
+???
+There is no such thing as package variables, so Option A is incorrect. Option C is incorrect as the variable is only in scope within a specific instance of the class. Option D is also incorrect as the variable is only in scope for a single method that it is defined in. Option B is the only correct answer as class variables are in scope within the program.
+~~~
+test
+26. Given the following wildcardimportstatements, which class would be included in the import?
+import television.actor.*;
+import movie.director.*;
+A television.actor.recurring.Marie@0.0
+B movie.directors.John@0.0
+C television.actor.Package@1.0
+D movie.NewRelease@0.0
+???
+Option A is incorrect as the sub-packagerecurringis not included by theimportstatements. Option B is also incorrect as it uses the pluraldirectorsinstead of the singulardirectorused in theimportstatements. Option D is incorrect as the wildcard is applied to the sub-packagemovie.director, not the packagemovie. Finally, Option C is correct as it is a valid class accessible from the wildcard import.
+~~~
+test
+27. Which is the correct order of statements for a Java class file?
+A importstatements,packagestatement,classdeclaration@0.0
+B packagestatement,classdeclaration,importstatement@0.0
+C classdeclaration,importstatements,packagedeclaration@0.0
+D packagestatement,importstatements,classdeclaration@1.0
+???
+Java classes are defined in this order:packagestatement,importstatements, class declaration, making Option D the only correct answer. Note that not all of these statements are required. For example, a class may not have apackagestatement, but if it does, it must come first in the file.
+~~~
+test
+28. Given the following class definition, what is the maximum number ofimportstatements that can be discarded and still have the code compile? For this question, assume that theBlackholeclass is defined only in thestarspackage.
+package planetarium;
+import java.lang.*;
+import stars.*;
+import java.lang.Object;
+import stars.Blackhole;
+ 
+public class Observer {
+  public void find(Blackhole blackhole) {}
+}
+A Zero@0.0
+B One@0.0
+C Two@0.0
+D Three@1.0
+???
+Theimportstatements forstars.*andstars.Blackholeare redundantimportstatements, since only the classBlackholeis used, and therefore one of them can be safely removed. Theimportstatementsjava.lang.*andjava.lang.Objectare both not required asjava.langis automatically imported in every Java class. Therefore, three of the fourimportstatements can be safely removed, making the correct answer Option D.
+~~~
+test
+29. Given the following class definition, which command will cause the application to output the messageWhite-tailed?
+package forest;
+public class Deer {
+  public static void main(String... deerParams) {
+      System.out.print(theInput[2]);
+  }
+}
+A java forest.Deer deer 5 "White-tailed deer"@0.0
+B java forest.Deer "White-tailed deer" deer 3@0.0
+C java forest.Deer Red deer White-tailed deer@1.0
+D java forest.Deer My "deer White-tailed"@0.0
+???
+The application prints the third argument of the input methods. Note that double quotes""group input arguments. Therefore, the third argument of Option A isWhite-tailed deer. The third argument of Option B is3. The third argument of Option C isWhite-tailed, making it the correct answer. Finally, Option D only has two input arguments, leading to anArrayIndexOutOfBoundsExceptiontrying to read the third argument at runtime.
+~~~
+test
+30. Which of the following is a true statement?
+A Thejavacommand compiles a.javafile into a.classfile.@0.0
+B Thejavaccommand compiles a.javafile into a.classfile.@1.0
+C Thejavacommand compiles a.classfile into a.javafile.@0.0
+D Thejavaccommand compiles a.classfile into a.javafile.@0.0
+???
+Thejavaccommand compiles a.javafile into a.classbytecode file, making Option B the correct answer.
+~~~
+test
+31. Which of the following statements about Java is true?
+A Java is a procedural programming language.@0.0
+B Java allows method overloading.@1.0
+C Java allows operator overloading.@0.0
+D Java allows direct access to objects in memory.@0.0
+???
+Java is object oriented, not procedural, so Option A is a false statement. Java allows method overloading in subclasses, so Option B is correct. Operator overloading is permitted in languages like C++, not Java, so Option C is also untrue. Finally, Option D is not a true statement as the JVM manages the location of objects in memory that can change and is transparent to the Java application.
+~~~
+test
+32. Given the following code, what values inserted in order into the blank lines, allow the code to compile?
+134_______agent;
+public  _______Banker {
+  private static  _______getMaxWithdrawal() {
+      return 10;
+  }
+}
+A import,class,null@0.0
+B import,interface,void@0.0
+C package,int,int@0.0
+D package,class,long@1.0
+???
+Option A is incorrect as the return type of the method cannot benull. Option B is also incorrect as the return type cannot bevoidif the method uses areturnstatement. Option C is incorrect too as theclasskeyword is replaced withint. Option D is correct because it’s the only answer that allows the code to compile without issue. Note that other values are possible for this question. For example, eitherintorlongcan be entered in the last blank. The key here is that only one of the available answer choices allows the code to compile.
+~~~
+test
+33. What is the output of the following application?
+public class Airplane {
+  static int start = 2;
+  final int end;
+  public Airplane(int x) {
+      x = 4;
+      end = x;
+  }
+  public void fly(int distance) {
+      System.out.print(end-start+" ");
+      System.out.print(distance);
+  }
+  public static void main(String... start) {
+      new Airplane(10).fly(5);
+  }
+}
+A 2 5@1.0
+B 8 5@0.0
+C 6 5@0.0
+D The code does not compile.@0.0
+???
+The code compiles so Option D is incorrect. The input to the constructor is ignored, making the assignment ofendto be4. Sincestartis2, the subtraction of4by2results in the application printing2, followed by5, making Option A the correct answer.
+~~~
+test
+34. What is one of the most important reasons that Java supports extending classes via inheritance?
+A Inheritance requires that a class that extends another class be in the same package.@0.0
+B The program must spend extra time/resources at runtime jumping through multiple layers of inheritance to determine precise methods and variables.@0.0
+C Method signature changes in parent classes may break subclasses that use overloaded methods.@0.0
+D Developers minimize duplicate code in new classes by sharing code in a common parent class.@1.0
+???
+Option A is a false statement, while Options B and C are actually arguments against using inheritance. Option D is one of the most important reasons Java supports inheritance, to allow increased code reuse among classes.
+~~~
+test
+35. Which of the following is a valid code comment in Java?
+A //////// Walk my dog@1.0
+B #! Go team!@0.0
+C / Process fails at runtime /@0.0
+D None of the above@0.0
+???
+The double slash (//) syntax can have any number of slashes as a comment, so long as it starts with two of them, making Option A the correct answer. The (#) is not a comment character in Java, regardless of whether it is followed by a (!), so Option B is incorrect. Option C is incorrect as a single slash (/) is not a valid comment in Java. Finally, Option D is incorrect as Option A is a valid comment.
+~~~
+test
+36. Which of the following method signatures is not a valid declaration of an entry point in a Java application?
+A public static void main(String... arguments)@0.0
+B public static void main(String arguments)@1.0
+C public static final void main(String[] arguments)@0.0
+D public static void main(String[] arguments)@0.0
+???
+An entry point in a Java application consists of amain()method with a singleString[]argument, return type ofvoid, and modifierspublicandstatic. Option D is the typical syntax for this method, although Options A and C are also valid forms of this method. Note that the modifierfinalis optional and may be added to the method signature. Furthermore, themain()method may take a vararg or array. Option B is the only invalid declaration as it does not take an array as an argument.
+~~~
+test
+37. Given the fileMagnet.javabelow, which of the marked lines can you independently insert the linepublic String color;into and still have the code compile?
+// line a1
+public class Magnet {
+  // line a2
+  public void attach() {
+      // line a3
+  }
+  // line a4
+}
+A a1anda3@0.0
+B a2anda4@1.0
+C a2,a3, anda4@0.0
+D a1,a2,a3, anda4@0.0
+???
+The line of code cannot be inserted ata1because no variables are allowed outside of the class declaration in this file, making Options A and D incorrect. The line of code can also not be inserted ata3as local variables defined within methods cannot have access modifiers such aspublic, making Option C incorrect. The code can be inserted independently ata2anda4as instance variables can be defined anywhere in the class outside a method. Therefore, Option B is the correct choice.
+~~~
+test
+38. What is required to define a valid Java class file?
+A Aclassdeclaration@1.0
+B Apackagestatement@0.0
+C At least oneimportstatement@0.0
+D Thepublicmodifier@0.0
+???
+Option A is the only correct answer as aclassdefinition is the only required component in a Java class file. Note that we said a Java class file here; Java also allows interfaces and enums to be defined in a file. Apackagestatement andimportstatements are optional for declaring a class, making Options B and C incorrect. A class may also be defined with package-level access in a file, making Option D an incorrect answer.
+~~~
+test
+39. What is the proper filename extension for a Java source file?
+A .jav@0.0
+B .class@0.0
+C .source@0.0
+D .java@1.0
+???
+The proper extension for a Java compiled bytecode file is.java, making Option D the correct answer.
+~~~
+test
+40. Given that aMathclass exists in both thejava.langandpocket.complexpackages, what is the result of compiling the following class?
+1: package pocket;
+2: import pocket.complex.*;
+3: import java.util.*;
+4: public class Calculator {
+5:   public static void main(String[] args) {
+6:      System.out.print(Math.floor(5));
+7:   }
+8: }
+A The code does not compile because of line 2.@0.0
+B The code does not compile because of line 3.@0.0
+C The code does not compile because of line 6.@1.0
+D The code compiles without issue.@0.0
+???
+Remember thatjava.langis automatically imported in all Java classes, therefore bothjava.lang.Mathandpocket.complex.Mathare both imported into this class. Importing both sets of packages does not cause any compilation issues, making Option A incorrect. Line 3 is unnecessary import but including it does not prevent the class from compiling, making Option B incorrect. While both versions ofMathmay be imported into the class, the usage of theMathclass requires a package name. Because of this, line 6 does not compile as the class reference is ambiguous, making Option C the correct answer and Option D incorrect.
+~~~
+test
+41. Given a class that uses the followingimportstatements, which class would not be automatically accessible within the class without using its full package name?
+import dog.*;
+import dog.puppy.*;
+A dog.puppy.female.KC@1.0
+B dog.puppy.Georgette@0.0
+C dog.Webby@0.0
+D java.lang.Object@0.0
+???
+Options B and C are accessible within the class as they are covered by theimportstatements. Option D is also fine asjava.lang.Objectis available without an explicit import. The only class not automatically accessible within the class without the full package name isdog.puppy.female.KCas theimportstatements do not include sub-packages; therefore, Option A is the correct answer.
+~~~
+test
+42. _______is the technique of structuring programming data as a unit consisting of attributes, with actions defined on the unit.
+A Encapsulation@0.0
+B Object orientation@1.0
+C Platform independence@0.0
+D Polymorphism@0.0
+???
+Object-oriented programming is the technique of structuring data into objects, which may contain data and a set of actions that operate on the data, making Option B the correct answer.
+~~~
+test
+43. Given the following class definition, what is the maximum number ofimportstatements that can be discarded and still have the code compile? For this question, assume that theBroccoliclass is in thefood.vegetablespackage, and theAppleclass is thefood.fruitpackage.
+package food;
+import food.vegetables.*;
+import food.fruit.*;
+import java.util.Date;
+ 
+public class Grocery {
+  Apple a; Broccoli b;  Date c;
+}
+A 0@1.0
+B 1@0.0
+C 2@0.0
+D 3@0.0
+???
+All of theimportstatements in this class are required. Removing any of them would cause the class to not compile, making Option A the correct answer.
+~~~
+test
+44. Given the following application, what is the expected output?
+public class Keyboard {
+  private boolean numLock = true;
+  static boolean capLock = false;
+  public static void main(String... shortcuts) {
+      System.out.print(numLock+" "+capLock);
+  }
+}
+A true false@0.0
+B false false@0.0
+C It does not compile.@1.0
+D It compiles but throws an exception at runtime.@0.0
+???
+ThenumLockvariable is not accessible in thestatic main()method without an instance of theKeyboardclass; therefore, the code does not compile, and Option C is the correct answer.
+~~~
+test
+45. What is the result of compiling and executing the following class?
+public class RollerSkates {
+  static int wheels = 1;
+  int tracks = 5;
+  public static void main(String[] arguments) {
+      RollerSkates s = new RollerSkates();
+      int feet=4, tracks = 15;
+      System.out.print(feet + tracks + s.wheels);
+  }
+}
+A The code does not compile.@0.0
+B 5@0.0
+C 10@0.0
+D 20@1.0
+???
+The code compiles and runs without issue, so Option A is incorrect. The question involves understanding the value and scope of each variable at theprint()statement. The variablesfeetandtracksare locally scoped and set to4and15, respectively, ignoring the value oftracksof5in the instance of the class. Finally, thestaticvariables.wheelshas a value of1. The result is the combined value is20, making Option D the correct answer.
+~~~
+test
+46. What is the result of compiling and executing the following class?
+package sports;
+public class Bicycle {
+  String color = "red";
+  private void printColor(String color) {
+      color = "purple";
+      System.out.print(color);
+  }
+  public static void main(String[] rider) {
+      new Bicycle().printColor("blue");
+  }
+}
+A red@0.0
+B purple@1.0
+C blue@0.0
+D It does not compile.@0.0
+???
+First off, thecolorvariable defined in the instance and set toredis ignored in the methodprintColor()as local scope overrides instance scope, so Option A is incorrect. The value ofcolorpassed to theprintColor()method isblue, but that is lost by the assignment topurple, making Option B the correct answer and Option C incorrect. Option D is incorrect as the code compiles and runs without issue.
+~~~
+test
+47. Which statements about calling the compilation commandjavacand the execution commandjavaare true?
+javamay use a period.to separate packages.
+javactakes a.javafile and returns a.classfile.
+javamay use a slash (/)to separate packages.
+A I only@0.0
+B II only@0.0
+C I and II@1.0
+D I, II, and III@0.0
+???
+Thejavaccommand takes a text-based.javafile and returns a binary bytecode.classfile, making II a true statement. Thejavacommand uses a period (.)to separate packages, not a slash (/), making I a true statement and III a false statement. For these reasons, Option C is the correct answer.
+~~~
+test
+48. What is the result of compiling and executing the following application?
+package forecast;
+public class Weather {
+  private static boolean heatWave = true;
+  public static void main() {
+      boolean heatWave = false;
+      System.out.print(heatWave);
+  }
+}
+A true@0.0
+B false@0.0
+C It does not compile.@0.0
+D It compiles but throws an error at runtime.@1.0
+???
+The application compiles without issue, so Option C is incorrect. The application does not execute though, as themain()method does not have the correct method signature. It is missing the required input argument, an array ofString. Trying to execute the application without a proper entry point produces an error, making Option D the correct answer.
+~~~
+test
+49. Given the following class diagram, which Java implementation most closely matches this structure?
+
+A public class Book {@0.0
+B    public int numOfPages;@0.0
+C public class Book {@1.0
+D    public String getRating() {return null;} }@0.0
+E public class Book {@0.0
+F    public int numberOfPages;@0.0
+G    public String getRating() {return null;} }@0.0
+H public class Book {@0.0
+???
+Option A does not compile because it is missing the closing bracket for the class. Option D does also not compile asvoidis not a valid type for a variable. Regardless, Options A and D are incorrect as they are missing thegetRating()method. Note that Option A also uses an abbreviation fornumberOfPages. Option B is incorrect as it is missing thenumberOfPagesattribute. Option C is the correct answer as it properly defines the attributenumberOfPagesand methodgetRating().
+~~~
+test
+50. 
+Which statement about the JVM is true?
+A The JVM schedules garbage collection on a predictable schedule.@0.0
+B The JVM ensures that the application will always terminate.@0.0
+C The JVM requires a properly defined entry point method to execute the application.@1.0
+D A Java compiled code can be run on any computer.@0.0
+???
+Garbage collection can happen at any time while an application is running, especially if the available memory suddenly becomes low, making Option A incorrect. Option B is also incorrect, since it is trivial to create a Java application with an infinite loop that never terminates. Option D is incorrect because the computer must be able to run the JVM in order to execute a Java class. Option C is the only correct answer, as the JVM does require an entry point method to begin executing the application.

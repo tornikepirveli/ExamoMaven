@@ -1,18 +1,20 @@
 package core;
 
+import java.util.List;
+
 public class FullQuesion {
 
-    private Question question;
-    private Answer[] Answers;
-    private Answer correctAnswer;
+    public Question question;
+    public List<Answer> Answers;
+    public Answer correctAnswer;
 
-    FullQuesion(Question question, Answer[] Answers, Answer correctAnswer){
+    public FullQuesion(Question question, List<Answer> Answers, Answer correctAnswer){
         this.question = question;
         this.Answers = Answers;
         this.correctAnswer = correctAnswer;
     }
 
-    FullQuesion(Question question, Answer[] Answers){
+    public FullQuesion(Question question, List<Answer> Answers){
         this.question = question;
         this.Answers = Answers;
         this.correctAnswer = null;
